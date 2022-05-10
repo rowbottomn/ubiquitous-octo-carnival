@@ -14,19 +14,15 @@
 
 <body>
   <?php 
-    $start = 1;
-    $end  = 30;
+    include 'chef.php';
+    include 'italian_chef.php';
 
-    echo "<table>";//make the html ul
-    for($i = 1; $i < $end; $i++){
-        echo "<tr>$i";
-        for ($j = 1; $j < $end; $j++){
-            echo "<td>",$i*$j,"</td>";//make the html ul
-        }
-        echo "</tr>";
-    }    
-  
-    echo "<ul>";//make the html ul
+    echo Chef::$staticAttribute."<br>";
+    $chef = new Chef("Gordon Ramsay",50);
+    $chef->makeSpecialDish();
+    echo "<br>";
+    $italianChef = new ItalianChef("Massimo Bottura", 55, "Italy");
+    $italianChef->makeSpecialDish();
   ?>
 </body>
 
