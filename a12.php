@@ -22,6 +22,7 @@
     $chef->makeSpecialDish();
     echo "<br>";
     $italianChef = new ItalianChef("Massimo Bottura", 55, "Italy");
+    echo $italianChef->age;
     $italianChef->makeSpecialDish();
   ?>
 </body>

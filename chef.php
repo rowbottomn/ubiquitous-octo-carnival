@@ -3,8 +3,6 @@
 
         static $staticAttribute =  "Italian Cooking";
 
-
-
         protected $name;
         public function __get($name) {
             return $this->$name;
@@ -15,13 +13,6 @@
         }
 
         protected $age;
-        public function __getAge($age) {
-            return $this->$age;
-        }
-
-        public function __setAge($age, $value) {
-            $this->$age = $value;
-        }
 
         function __construct($name, $age) {
             $this->name = $name;
