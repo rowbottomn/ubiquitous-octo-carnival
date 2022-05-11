@@ -14,10 +14,18 @@
 
         protected $age;
 
-        function __construct($name, $age) {
-            $this->name = $name;
-            $this->age = $age;    
+        function __construct() {
+            $this->name = "John Doe";
+            $this->age = "30";    
         }
+
+        //this is to use for no parameter constructor 
+        public static function new($name, $age) {
+            $obj = new self();
+            $obj->name = $name;
+            $obj->age = $age;    
+            return $obj;
+        }   
 
         public function makeChicken(){
             echo "<p>the chef makes chicken</p><br>";

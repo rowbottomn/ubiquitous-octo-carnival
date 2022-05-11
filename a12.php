@@ -18,7 +18,9 @@
     include 'italian_chef.php';
 
     echo Chef::$staticAttribute."<br>";
-    $chef = new Chef("Gordon Ramsay",50);
+    $genericChef = new Chef();
+    echo $genericChef->name;
+    $chef = Chef::new("Gordon Ramsay",50);
     $chef->makeSpecialDish();
     echo "<br>";
     $italianChef = new ItalianChef("Massimo Bottura", 55, "Italy");
