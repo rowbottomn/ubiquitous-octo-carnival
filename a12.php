@@ -16,16 +16,23 @@
   <?php 
     include 'chef.php';
     include 'italian_chef.php';
+    include 'chef_magic.php';
+    include 'chef_magic_call.php';
+    include 'chef_helper.php';
+    include 'chef_factory.php';
 
     echo Chef::$staticAttribute."<br>";
-    $genericChef = new Chef();
-    echo $genericChef->name;
-    $chef = Chef::new("Gordon Ramsay",50);
+
+    $chef = new Chef("Hank", 30) ;
+    //$chef->new(['name'=>'frank', 'age'=> 50]);
     $chef->makeSpecialDish();
+    $chef->name = "Frank";
+    echo $chef->name;
     echo "<br>";
     $italianChef = new ItalianChef("Massimo Bottura", 55, "Italy");
     echo $italianChef->age;
     $italianChef->makeSpecialDish();
+    $italianChef->makeOldSpecialDish2();
   ?>
 </body>
 
